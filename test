@@ -1,0 +1,70 @@
+#ignore this comment, shell
+#ignore this comment, shell
+
+exec pwd
+
+exec echo /root/user/bin/home/stanway/woot
+
+#(echo abc) > abc.txt
+exec (ps)
+
+#ignore this comment, shell
+#echo !;echo b;echo c
+
+#(ls)>ls.txt
+
+(ps) >abc.txt
+
+
+cat README && echo cat finished 
+
+ : :
+true
+
+#ignore this comment, shell
+
+
+false
+
+#ignore this comment, shell
+
+true;false
+
+ls;ls;ls;echo END!!!!!!!!!!!!!!!!!!!!
+
+exec (cat && sort) < README
+
+exec echo almost the end
+
+echo end of || echo shell
+
+cat < abc.txt > abc2.txt
+
+exec clear
+
+echo b > a.txt && echo 0
+
+echo b > a.txt && echo 1
+
+echo b > a.txt && echo 2
+
+cat a.txt && echo 3
+
+echo b > a.txt && echo 4
+
+#when all are dependent, thinks all the first is independent
+#should the first one be independent because it doesn't have to wait on anything before?
+#not sure if this is right...
+
+#	 								 ^
+#									/_\
+#								   /___\
+#								  /_____\
+#								 /       \
+#								/ <(-O-)> \
+#							   /___________\
+#							  /_____________\
+#							    -illuminati-
+clear
+
+pwd

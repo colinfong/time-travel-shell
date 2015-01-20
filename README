@@ -1,0 +1,60 @@
+   __  _                   __                        __        __         ____
+  / /_(_)___ ___  ___     / /__________ __   _____  / /  _____/ /_  ___  / / /
+ / __/ / __ `__ \/ _ \   / __/ ___/ __ `/ | / / _ \/ /  / ___/ __ \/ _ \/ / / 
+/ /_/ / / / / / /  __/  / /_/ /  / /_/ /| |/ /  __/ /  (__  ) / / /  __/ / /  
+\__/_/_/ /_/ /_/\___/   \__/_/   \__,_/ |___/\___/_/  /____/_/ /_/\___/_/_/  
+											 //UCLA CS 111 Spring 14 Lab 1
+-------------------------------------------------------------------------------
+Contributors
+-------------------------------------------------------------------------------	
+	-=-=<<<Stanway Liau 804181960>>>=-=-
+	..:xX~~~Colin Fong 304202663~~~Xx:..
+-------------------------------------------------------------------------------
+Notes
+-------------------------------------------------------------------------------
+1a
+-------------------------------------------------------------------------------
+	Cannot handle append operators such as << and >>.
+		-will design this functionality in the design project.
+
+	Cannot handle (( )).
+
+	Memory leaks galore.
+-------------------------------------------------------------------------------
+1b
+-------------------------------------------------------------------------------
+	Correctly ignores comments at the beginning of the script.
+	Seemingly does subshells with correct I/O redirection.
+
+	I/O Redirection is limited to the shell syntax subset specified.
+
+	Line number for syntax error reporting is too large by two if the
+	syntax error occurs at the end of the file.
+
+	Doesn't support the shell directive 'exec' if used in the shell script.
+
+	Will not properly handle the command 'cd'.
+
+	Possibly not closing all opened file descriptors.
+-------------------------------------------------------------------------------
+1c
+-------------------------------------------------------------------------------
+	Goal: 100% accuracy, <=100% parallelism.
+		-we only parallelize between different command trees, not within
+		 each command tree.
+
+	Shell prompt may return before all commands in the shell script print
+	their results.
+
+	More memory leaks introduced.
+-------------------------------------------------------------------------------
+Project specification can be found at
+	http://cs.ucla.edu/classes/spring14/cs111/assign/lab1.html
+-------------------------------------------------------------------------------
+Ideas for future improvements:
+	If we don't care too much about memory, unify all the different
+	node structures into a single one with all needed fields. Then
+	don't need to sorry about type conversions and data structures
+	can just hold a single type of node. Also easier to just go
+	through them all and free them when done. 
+-------------------------------------------------------------------------------
